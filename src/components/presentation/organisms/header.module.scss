@@ -1,0 +1,45 @@
+@import '/src/styles/mixin.scss';
+.header{
+    width: 100%;
+    padding: 0.8rem 1.3rem;
+    background-color: #2997cf;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 1;
+}
+.title__wrap{
+    display: table;
+}
+.title{
+    color: #fff;
+    font-size: 1.3rem;
+    display: table-cell;
+    vertical-align: middle;
+}
+.pcNav{
+    display: none;
+    @include mq(pc) {
+        display: flex;
+    }
+}
+.spNav{
+    display: none;
+    @include mq(sp) {
+        display: flex;
+    }
+}
+.pcNav__button{
+    color: #fff;
+    font-size: 1.1rem;
+    display: flex;
+    padding-left: 1rem;
+    cursor: pointer;
+    &:hover{
+        opacity:0.5;
+    }
+}
+.spNav__button{
+    width:24px;
+}

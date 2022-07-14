@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Styles from "./layout.module.scss";
+import Header from "../organisms/header";
 
 function Layout({ children }) {
   return (
@@ -7,7 +8,8 @@ function Layout({ children }) {
       <Head>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>{children}</main>
+      <Header></Header>
+      {children}
     </div>
   );
 }
