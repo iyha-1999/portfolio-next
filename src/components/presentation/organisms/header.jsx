@@ -2,7 +2,7 @@ import Image from "next/image";
 import Styles from "./header.module.scss";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
-const Header = ({ clickedHamburgerMenuButton }) => {
+const Header = ({ clickedHamburgerMenuButton, contentsData }) => {
   return (
     <>
       <div className={Styles.header}>
@@ -25,22 +25,18 @@ const Header = ({ clickedHamburgerMenuButton }) => {
           </div>
         </div>
         <div className={Styles.pcNav}>
-          <AnchorLink href="#profile" offset="50">
-            <div
-              className={Styles.pcNav__button}
-              onClick={clickedHamburgerMenuButton}
-            >
-              profile
-            </div>
-          </AnchorLink>
-          <AnchorLink href="#works" offset="50">
-            <div
-              className={Styles.pcNav__button}
-              onClick={clickedHamburgerMenuButton}
-            >
-              works
-            </div>
-          </AnchorLink>
+          {contentsData.map((_) => {
+            return (
+              <AnchorLink href={`#${_.id}`} offset="50" key={_.id}>
+                <div
+                  className={Styles.pcNav__button}
+                  onClick={clickedHamburgerMenuButton}
+                >
+                  {_.name}
+                </div>
+              </AnchorLink>
+            );
+          })}
         </div>
       </div>
     </>
