@@ -3,7 +3,7 @@ import Styles from "./layout.module.scss";
 import Header from "../organisms/header";
 import Footer from "../organisms/footer";
 import useModal from "../../../hooks/modalHooks";
-import HamburgerMenuModal from "../molecules/HamburgerMenuModal";
+import HamburgerMenuModal from "../molecules/hamburgerMenuModal";
 
 function Layout({ children, contentsData }) {
   const hamburgerMenuModalStore = useModal();
