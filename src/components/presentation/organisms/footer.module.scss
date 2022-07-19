@@ -1,0 +1,35 @@
+.footer{
+    position: relative;
+}
+.footer-title{
+    width: 100%;
+    padding: 2rem 1.3rem;
+    background-color: #2997cf;
+    color:#fff;
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 1;
+}
+.footer-anchorLink{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left:calc((100% - 100px) / 2);
+    top: -50px;
+    z-index: 3;
+}
+.footer-faCircleChevronUpIcon{
+    width: 100px;
+    height: 100px;
+    color:#2997cf;
+}
+.footer-faCircleChevronUpIcon__bg{
+    background: #fff;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    left: calc((100% - 100px) / 2);
+    top: -50px;
+    z-index: 2;
+    border-radius: 50%;
+}

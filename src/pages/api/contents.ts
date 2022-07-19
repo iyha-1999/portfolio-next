@@ -37,20 +37,26 @@ export default function handler(
 ) {
   res.status(200).json({
     contents: [
-      { id: "profile", name: "profile", thumbnail: "", description: "" },
+      {
+        id: "profile",
+        name: "profile",
+        thumbnail: "/images/icon/profileIcon.png",
+        description:
+          "電子書籍のDTPオペレータ、webデザインの仕事などに従事していたが、ゲーム制作の仕事をしたくなり、ブラウザゲームの会社にデザイナー兼コーダーとして就職。フロントのコーディングにハマっていき、デザイナーからフロントエンジニアとなる。直近では広告クリエイティブのコーディング、LP、Vue.jsを使用した動画サービスの開発などに携わりました。",
+      },
       {
         id: "works",
         name: "works",
         cards: [
           {
             title: "広告クリエイティブ",
-            thumbnail: "/public/images/works/topThumbnails/0.png",
+            thumbnail: "/images/works/topThumbnails/0.jpg",
             thumbnails: [
-              "/public/images/works/modalThumbnails/creativeList/0.png",
-              "/public/images/works/modalThumbnails/creativeList/1.png",
-              "/public/images/works/modalThumbnails/creativeList/2.png",
-              "/public/images/works/modalThumbnails/creativeList/3.png",
-              "/public/images/works/modalThumbnails/creativeList/4.png",
+              "/images/works/modalThumbnails/creativeList/0.png",
+              "/images/works/modalThumbnails/creativeList/1.png",
+              "/images/works/modalThumbnails/creativeList/2.png",
+              "/images/works/modalThumbnails/creativeList/3.png",
+              "/images/works/modalThumbnails/creativeList/4.png",
             ],
             description:
               "Banner Revolutionプロジェクトにて広告の動的クリエイティブバナーを作成しました。広告を表示する制約上、Jquery以外のライブラリを入れることが出来なかったため、ほぼピュアなjavascriptで実装しました。複雑な構成はejsを使用し、コンポーネント分けをしてコーディングしました。CSSTransition,javascriptに対する理解が深まりました。3年間で約200本のクリエイティブを作成しました。",
@@ -75,11 +81,11 @@ export default function handler(
           },
           {
             title: "webinar-room",
-            thumbnail: "/public/images/works/topThumbnails/1.png",
+            thumbnail: "/images/works/topThumbnails/1.jpg",
             thumbnails: [
-              "/public/images/works/modalThumbnails/webinar/0.png",
-              "/public/images/works/modalThumbnails/webinar/1.png",
-              "/public/images/works/modalThumbnails/webinar/2.png",
+              "/images/works/modalThumbnails/webinar/0.png",
+              "/images/works/modalThumbnails/webinar/1.png",
+              "/images/works/modalThumbnails/webinar/2.png",
             ],
             description:
               "ウェビナーの動画サービス、webinar-roomの動画コンポーネント、ランキンページ、LPをメインに実装を行いました。動画部分はhls.jsでストリーミングに対応しました。",
@@ -105,11 +111,11 @@ export default function handler(
           },
           {
             title: "僕らの放課後戦争",
-            thumbnail: "/public/images/works/topThumbnails/2.png",
+            thumbnail: "/images/works/topThumbnails/2.jpg",
             thumbnails: [
-              "/public/images/works/modalThumbnails/sgame/0.png",
-              "/public/images/works/modalThumbnails/sgame/1.png",
-              "/public/images/works/modalThumbnails/sgame/2.png",
+              "/images/works/modalThumbnails/sgame/0.png",
+              "/images/works/modalThumbnails/sgame/1.png",
+              "/images/works/modalThumbnails/sgame/2.png",
             ],
             description:
               "LP,UIのコーディング、Flashアニメーションの繋ぎ込み、バナー制作、イベントページのUIデザインを行いました。",
@@ -125,12 +131,12 @@ export default function handler(
           },
           {
             title: "対魔忍アサギ〜決戦アリーナ〜",
-            thumbnail: "/public/images/works/topThumbnails/3.png",
+            thumbnail: "/images/works/topThumbnails/3.jpg",
             thumbnails: [
-              "/public/images/works/modalThumbnails/asagi/0.png",
-              "/public/images/works/modalThumbnails/asagi/1.png",
-              "/public/images/works/modalThumbnails/asagi/2.png",
-              "/public/images/works/modalThumbnails/asagi/3.png",
+              "/images/works/modalThumbnails/asagi/0.png",
+              "/images/works/modalThumbnails/asagi/1.png",
+              "/images/works/modalThumbnails/asagi/2.png",
+              "/images/works/modalThumbnails/asagi/3.png",
             ],
             description:
               "リリース後の運営からチームに参加し、UIデザイン、アイコン制作、コーディング、アニメーション制作、バナー作成を行いました。追加機能ではボスバトルガチャページのコーディング、ガチャ演出のFlash、更新画像のルーチンを作成しました。更新画像の効率化のため、PhotoShop Scriptにて、立ち絵、カード画像、フェイスアイコンの自動書き出しスクリプトを作成しました。他社引き継ぎ作業も行い、イベント更新フローの資料を作成しました。",
@@ -146,16 +152,16 @@ export default function handler(
           },
           {
             title: "ぜったい遵守☆ぱこぱこカーニバル",
-            thumbnail: "/public/images/works/topThumbnails/4.png",
+            thumbnail: "/images/works/topThumbnails/4.jpg",
             thumbnails: [
-              "/public/images/works/modalThumbnails/kozu/0.png",
-              "/public/images/works/modalThumbnails/kozu/1.png",
-              "/public/images/works/modalThumbnails/kozu/2.png",
-              "/public/images/works/modalThumbnails/kozu/3.png",
-              "/public/images/works/modalThumbnails/kozu/4.png",
-              "/public/images/works/modalThumbnails/kozu/5.png",
-              "/public/images/works/modalThumbnails/kozu/6.png",
-              "/public/images/works/modalThumbnails/kozu/7.png",
+              "/images/works/modalThumbnails/kozu/0.png",
+              "/images/works/modalThumbnails/kozu/1.png",
+              "/images/works/modalThumbnails/kozu/2.png",
+              "/images/works/modalThumbnails/kozu/3.png",
+              "/images/works/modalThumbnails/kozu/4.png",
+              "/images/works/modalThumbnails/kozu/5.png",
+              "/images/works/modalThumbnails/kozu/6.png",
+              "/images/works/modalThumbnails/kozu/7.png",
             ],
             description:
               "企画〜リリース〜運営まで携わり、全ページのデザイン、view部分のコーディングを1人で行いました。 UIデザイン、アイコン作成、コーディング、アニメーション制作、バナー作成、イベント更新画像の作成を行いました。また、各セクションに共有するUI資料、工数の調整を行いました。",
@@ -171,13 +177,13 @@ export default function handler(
           },
           {
             title: "スクールさーばんつ",
-            thumbnail: "/public/images/works/topThumbnails/5.png",
+            thumbnail: "/images/works/topThumbnails/5.jpg",
             thumbnails: [
-              "/public/images/works/modalThumbnails/school/0.png",
-              "/public/images/works/modalThumbnails/school/1.png",
-              "/public/images/works/modalThumbnails/school/2.png",
-              "/public/images/works/modalThumbnails/school/3.png",
-              "/public/images/works/modalThumbnails/school/4.png",
+              "/images/works/modalThumbnails/school/0.png",
+              "/images/works/modalThumbnails/school/1.png",
+              "/images/works/modalThumbnails/school/2.png",
+              "/images/works/modalThumbnails/school/3.png",
+              "/images/works/modalThumbnails/school/4.png",
             ],
             description:
               "リリース直前〜運営まで携わり、在宅スタッフとして4人のチームでデザイン業務を行いました。UIデザイン、アイコン作成、コーディング、イベント更新画像の作成を行いました。在宅スタッフのリーダーとしてディレクション業務も行い、Redmineでのタスク作成と管理などを行いました。",
@@ -192,10 +198,10 @@ export default function handler(
           },
           {
             title: "WEBGL研究開発",
-            thumbnail: "/public/images/works/topThumbnails/6.png",
+            thumbnail: "/images/works/topThumbnails/6.jpg",
             thumbnails: [
-              "/public/images/works/modalThumbnails/three/0.png",
-              "/public/images/works/modalThumbnails/three/1.png",
+              "/images/works/modalThumbnails/three/0.png",
+              "/images/works/modalThumbnails/three/1.png",
             ],
             description:
               "BXDプラットフォームへの提案用にthree.js,WEBGLを使用し、3Dゲームの研究開発を行いました。コーディング、3Dの加工、素材収集などを一人で担当しました。マウスをドラッグすると追従してモデルが動きます。",
@@ -211,12 +217,12 @@ export default function handler(
           },
           {
             title: "開発中2Dサンドボックスゲーム",
-            thumbnail: "/public/images/works/topThumbnails/7.png",
+            thumbnail: "/images/works/topThumbnails/7.jpg",
             thumbnails: [
-              "/public/images/works/modalThumbnails/sandbox/0.png",
-              "/public/images/works/modalThumbnails/sandbox/1.png",
-              "/public/images/works/modalThumbnails/sandbox/2.png",
-              "/public/images/works/modalThumbnails/sandbox/3.png",
+              "/images/works/modalThumbnails/sandbox/0.png",
+              "/images/works/modalThumbnails/sandbox/1.png",
+              "/images/works/modalThumbnails/sandbox/2.png",
+              "/images/works/modalThumbnails/sandbox/3.png",
             ],
             description:
               "マインクラフトの2D風のゲームを開発しています。イラスト、背景、プログラム、音楽を全て一人で作っています。詳しい仕様はgithubに記載しています。",
@@ -232,10 +238,10 @@ export default function handler(
           },
           {
             title: "技術研究_ランダムマップ",
-            thumbnail: "/public/images/works/topThumbnails/8.png",
+            thumbnail: "/images/works/topThumbnails/8.jpg",
             thumbnails: [
-              "/public/images/works/modalThumbnails/randomSheedMap/0.png",
-              "/public/images/works/modalThumbnails/randomSheedMap/1.png",
+              "/images/works/modalThumbnails/randomSheedMap/0.png",
+              "/images/works/modalThumbnails/randomSheedMap/1.png",
             ],
             description:
               "React,Redux,Pixi.jsを組み合わせて、ゲームの開発環境を作るために始めたプロジェクトです。リロードするとマップがランダムに変更されます。詳細はgiuhubに記載しています。",
@@ -251,10 +257,10 @@ export default function handler(
           },
           {
             title: "ポートフォリオサイト",
-            thumbnail: "/public/images/works/topThumbnails/9.png",
+            thumbnail: "/images/works/topThumbnails/9.jpg",
             thumbnails: [
-              "/public/images/works/modalThumbnails/pf/0.png",
-              "/public/images/works/modalThumbnails/pf/1.png",
+              "/images/works/modalThumbnails/pf/0.png",
+              "/images/works/modalThumbnails/pf/1.png",
             ],
             description:
               "今まで作った作品をまとめるために作成しました。React.jsを使用しました。",
