@@ -237,12 +237,12 @@ export default function handler(
               "/images/works/modalThumbnails/pf/1.png",
             ],
             description:
-              "今まで作った作品をまとめるために作成しました。React.jsを使用しました。",
+              "今まで作った作品をまとめるために作成しました。Next.jsを使用し、デプロイはVercelで行っています。",
             links: [
               {
                 title: "ポートフォリオ",
                 icon: "link",
-                url: "https://junnitta-pf.sakura.ne.jp/contents/randomSeedMap/",
+                url: "https://n-j-pf.com/",
               },
               {
                 title: "gitHub",
@@ -250,7 +250,7 @@ export default function handler(
                 url: "https://github.com/iyha-1999/portfolio",
               },
             ],
-            developmentEnvironment: "HTML,CSS,Javascript,React.js",
+            developmentEnvironment: "HTML,CSS,Javascript,React.js,Next.js",
           },
         ],
       },
