@@ -1,31 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-
-type IdAndName = {
-  id: string;
-  name: string;
-};
-
-type Profile = IdAndName & {
-  thumbnail: string;
-  description: string;
-};
-
-type WorkLink = {
-  icon: string;
-  title: string;
-  url: string;
-};
-type WorkCard = {
-  thumbnail: string;
-  thumbnails: string[];
-  title: string;
-  description: string;
-  links: WorkLink[];
-  developmentEnvironment: string;
-};
-type Works = IdAndName & { cards: WorkCard[] };
-
-type contents = [Profile, Works];
+import type { contents } from "../../types/contents";
 
 type Data = {
   contents: contents;

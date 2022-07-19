@@ -3,7 +3,8 @@ import Head from "next/head";
 import useSWR from "swr";
 import useModal from "../hooks/modalHooks";
 
-import styles from "../styles/Home.module.scss";
+import type { WorkCard } from "../types/contents";
+
 import Layout from "../components/presentation/layouts/layout";
 import Profile from "../components/presentation/organisms/profile";
 import Works from "../components/presentation/organisms//works";
@@ -49,8 +50,7 @@ const Home: NextPage = () => {
 
   return (
     <Layout contentsData={data.contents}>
-      {console.log(worksData)}
-      {worksData.cards.map((_: any, index: number) => (
+      {worksData.cards.map((_: WorkCard, index: number) => (
         <WorkModal
           key={index}
           modalStatus={workModalStores[index].modalStatus}
@@ -58,7 +58,7 @@ const Home: NextPage = () => {
           title={_.title}
           description={_.description}
           links={_.links}
-          developmentEnvironmentDetail={_.developmentEnvironmentDetail}
+          developmentEnvironmentDetail={_.developmentEnvironment}
           thumbnails={_.thumbnails}
           clickedCloseButton={cancelBodyScroll}
         ></WorkModal>
