@@ -10,7 +10,7 @@ function Layout({ children, contentsData }) {
   return (
     <div className={Styles.container}>
       <Head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/images/favicon/favicon.ico" />
         <title>Portfolio</title>
       </Head>
       <HamburgerMenuModal
