@@ -28,12 +28,7 @@ const Header = ({ clickedHamburgerMenuButton, contentsData }) => {
           {contentsData.map((_) => {
             return (
               <AnchorLink href={`#${_.id}`} offset="50" key={_.id}>
-                <div
-                  className={Styles.pcNav__button}
-                  onClick={clickedHamburgerMenuButton}
-                >
-                  {_.name}
-                </div>
+                <div className={Styles.pcNav__button}>{_.name}</div>
               </AnchorLink>
             );
           })}
