@@ -68,7 +68,7 @@ const Home: NextPage<Props> = ({ allContentsData, profileData, worksData }) => {
 };
 
 export async function getStaticProps() {
-  const response = await fetch("http://localhost:3000/api/contents");
+  const response = await fetch("https://n-j-pf.com/api/contents");
   const data = await response.json();
 
   return {
