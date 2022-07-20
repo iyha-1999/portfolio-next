@@ -1,16 +1,24 @@
-import type { NextPage } from "next";
-import Head from "next/head";
-import useSWR from "swr";
+import type { GetStaticProps, NextPage } from "next";
 import useModal from "../hooks/modalHooks";
 
-import type { WorkCard } from "../types/contents";
+import type {
+  Profile as TProfile,
+  Works as TWorks,
+  WorkCard as TWorkCard,
+} from "../types/contents";
 
 import Layout from "../components/presentation/layouts/layout";
 import Profile from "../components/presentation/organisms/profile";
 import Works from "../components/presentation/organisms//works";
 import WorkModal from "../components/presentation/molecules/workModal";
 
-const Home: NextPage = () => {
+type Props = {
+  allContentsData: TProfile;
+  profileData: TProfile;
+  worksData: TWorks;
+};
+
+const Home: NextPage<Props> = ({ allContentsData, profileData, worksData }) => {
   const workModalStores = [
     useModal(),
     useModal(),
@@ -34,23 +42,9 @@ const Home: NextPage = () => {
     elm != null ? (elm.style.overflowY = "auto") : "";
   };
 
-  const fetchContents = async () => {
-    const response = await fetch("/api/contents");
-    const data = await response.json();
-    return data;
-  };
-
-  const { data, error } = useSWR("/api/contents", fetchContents);
-
-  if (error) return <div>failed to load</div>;
-  if (!data) return <div>loading...</div>;
-
-  const profileData = data.contents[0];
-  const worksData = data.contents[1];
-
   return (
-    <Layout contentsData={data.contents}>
-      {worksData.cards.map((_: WorkCard, index: number) => (
+    <Layout contentsData={allContentsData}>
+      {worksData.cards.map((_: TWorkCard, index: number) => (
         <WorkModal
           key={index}
           modalStatus={workModalStores[index].modalStatus}
@@ -72,5 +66,25 @@ const Home: NextPage = () => {
     </Layout>
   );
 };
+
+export async function getStaticProps(context: any) {
+  // console.log(context);
+  // const host = context.req.headers.host || "localhost:3000";
+  // const protocol = /^localhost/.test(host) ? "http" : "https";
+  // const contents = await fetch(`${protocol}://${host}/api/contents`).then(
+  //   (data) => data.json()
+  // );
+
+  const response = await fetch("http://localhost:3000/api/contents");
+  const data = await response.json();
+
+  return {
+    props: {
+      allContentsData: data.contents,
+      profileData: data.contents[0],
+      worksData: data.contents[1],
+    },
+  };
+}
 
 export default Home;
