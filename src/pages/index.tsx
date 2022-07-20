@@ -67,14 +67,7 @@ const Home: NextPage<Props> = ({ allContentsData, profileData, worksData }) => {
   );
 };
 
-export async function getStaticProps(context: any) {
-  // console.log(context);
-  // const host = context.req.headers.host || "localhost:3000";
-  // const protocol = /^localhost/.test(host) ? "http" : "https";
-  // const contents = await fetch(`${protocol}://${host}/api/contents`).then(
-  //   (data) => data.json()
-  // );
-
+export async function getStaticProps() {
   const response = await fetch("http://localhost:3000/api/contents");
   const data = await response.json();
 
