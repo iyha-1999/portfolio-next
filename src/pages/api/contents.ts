@@ -185,6 +185,11 @@ export default function handler(
                 icon: "link",
                 url: "http://junnitta-pf.sakura.ne.jp/contents/three/",
               },
+              {
+                title: "gitHub",
+                icon: "gitHub",
+                url: "https://github.com/iyha-1999/webGLAnimation",
+              },
             ],
             developmentEnvironment:
               "HTML,CSS,Javascript,three.js,Blender,Photoshop",
@@ -206,6 +211,11 @@ export default function handler(
                 icon: "link",
                 url: "https://junnitta-pf.sakura.ne.jp/contents/unity2DSandboxGame/",
               },
+              {
+                title: "gitHub",
+                icon: "gitHub",
+                url: "https://github.com/iyha-1999/2dSandboxGame",
+              },
             ],
             developmentEnvironment:
               "Unity,C#,UniRx,inputSystem,photoshop,clips tudio",
@@ -224,6 +234,11 @@ export default function handler(
                 title: "randomSeedMap(PC用)",
                 icon: "link",
                 url: "https://junnitta-pf.sakura.ne.jp/contents/randomSeedMap/",
+              },
+              {
+                title: "gitHub",
+                icon: "gitHub",
+                url: "https://github.com/iyha-1999/randomSeedMap",
               },
             ],
             developmentEnvironment:
@@ -247,7 +262,7 @@ export default function handler(
               {
                 title: "gitHub",
                 icon: "gitHub",
-                url: "https://github.com/iyha-1999/portfolio",
+                url: "https://github.com/iyha-1999/portfolio-next",
               },
             ],
             developmentEnvironment: "HTML,CSS,Javascript,React.js,Next.js",
