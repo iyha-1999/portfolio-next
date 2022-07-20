@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleXmark } from "@fortawesome/free-solid-svg-icons/faCircleXmark";
 import { faLink } from "@fortawesome/free-solid-svg-icons/faLink";
 import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub";
+import Image from "next/image";
 import Styles from "./workModal.module.scss";
 import Modal from "../../presentation/atoms/modal";
 import Tab from "../../presentation/atoms/tab";
@@ -84,12 +85,14 @@ const WorkModal = ({
               <Tab
                 buttonsWrapStyle={Styles["modal-tab-buttons__wrap"]}
                 buttonElms={thumbnails.map((_, index) => (
-                  <img
-                    className={Styles["modal-thumbnail"]}
-                    src={_}
-                    alt=""
-                    key={index}
-                  />
+                  <div key={index} className={Styles["modal-thumbnail"]}>
+                    <Image
+                      src={_}
+                      alt=""
+                      layout={"fill"}
+                      objectFit={"contain"}
+                    />
+                  </div>
                 ))}
                 contentsWrapStyle={Styles["modal-tab-contents__wrap"]}
                 contentsElms={thumbnails.map((_, index) => (
