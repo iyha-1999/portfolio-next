@@ -1,3 +1,4 @@
+@import '/src/styles/mixin.scss';
 .profile{
     background:#fafafa;
     width: 100%;
@@ -24,7 +25,7 @@
     text-align: center;
     padding: 2.5rem 0;
     font-size: 3.5rem;
-    @media screen and (max-width:769px) { 
+    @include mq(sp){
         font-size: 2rem;
     }
 }
@@ -32,14 +33,14 @@
     width: 150px;
     height: 150px;
     margin-right: 1rem;
-    @media screen and (max-width:769px) { 
+    @include mq(sp){
         margin: 0 auto;
     }
 }
 .description{
     width:70%;
     line-height: 2rem;
-    @media screen and (max-width:769px) { 
+    @include mq(sp){
         width:100%;
         margin: 0 auto;
     }

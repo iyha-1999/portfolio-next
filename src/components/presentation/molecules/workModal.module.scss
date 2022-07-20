@@ -1,3 +1,4 @@
+@import '/src/styles/mixin.scss';
 .modal{
     position: fixed;
     top: 0;
@@ -28,7 +29,7 @@
         transform: scale(1);
         opacity:1;
     }
-    @media screen and (min-width:768px){
+    @include mq(pc) {
         display: flex;
         justify-content:center;
     }
@@ -75,7 +76,7 @@
 }
 .modal-titleAndDevelopmentEnvironment__wrap{
     width: 39%;
-    @media screen and (max-width:769px) { 
+    @include mq(sp) {
         width: 100%;
     }
 }
@@ -102,7 +103,7 @@
 }
 .modal-thumbnails{
     text-align: center;
-    @media screen and (min-width:768px){
+    @include mq(pc){
         padding-left: 2rem;
         width: 50%;
     }
